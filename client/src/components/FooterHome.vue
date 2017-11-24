@@ -18,7 +18,7 @@
       <audio class="audioplayer" id="sound1" src="https://storage.googleapis.com/bucket-stopoband/aerosmith - crazy.mp3" type="audio/mp3" controls="controls"></audio>
     </div>
     
-    <div class="audio-player sound2">
+    <!-- <div class="audio-player sound2">
       <div class="audio-close">X</div>
       <audio class="audioplayer" id="sound2" src="static/TheChainsmokers&Coldplay-SomethingJustLikeThis(Lyric).mp3" type="audio/mp3" controls="controls"></audio>
     </div>
@@ -31,14 +31,23 @@
     <div class="audio-player sound4">
       <div class="audio-close">X</div>
       <audio class="audioplayer" id="sound4" src="https://storage.googleapis.com/bucket-stopoband/aerosmith - crazy.mp3" type="audio/mp3" controls="controls"></audio>
-    </div>
+    </div> -->
   <!-- LOAD MAIN SONG -->
   </div>
 </template>
 
 <script>
+import { mapActions,mapState } from 'vuex'
+import axios from 'axios'
 export default {
-
+  computed:{
+    ...mapState([
+      "detail"
+    ])
+  },
+  mounted: function() {
+    console.log(this.detail)
+  }
 }
 </script>
 
